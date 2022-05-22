@@ -1,0 +1,7 @@
+.banner{
+    background: url(../assets/images//banner.jpg);
+    height: 500px;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+}

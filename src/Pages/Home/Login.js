@@ -105,11 +105,11 @@ const Login = () => {
                         </div>
                         <p className='cursor-pointer' onClick={handleReset} >Reset Password</p>
                         {signInError}
-                        <input className='btn text-white w-full ' type="submit" value="Login" />
+                        <input className='btn  btn-primary  text-white w-full ' type="submit" value="Login" />
                     </form>
-                    <p className='ml-2'>New to wesite? <Link to='/register' className='text-secondary'>Create New Account</Link></p>
+                    <p className='ml-2'>New to wesite? <Link to='/register' className='text-primary font-bold'>Create New Account</Link></p>
                     <div className="divider">OR</div>
-                    <button onClick={() => signInWithGoogle()} className="btn btn-outline ">CONTINUE WITH GOOGLE</button>
+                    <button onClick={() => signInWithGoogle()} className="btn btn-primary btn-outline ">CONTINUE WITH GOOGLE</button>
 
 
                 </div>

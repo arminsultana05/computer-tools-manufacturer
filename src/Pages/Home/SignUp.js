@@ -4,10 +4,11 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
-import { sendEmailVerification } from 'firebase/auth';
+
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate()
     // <...Create Email Authentication...>
@@ -16,7 +17,7 @@ const SignUp = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword({ sendEmailVerification:true} ,auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true });
       const [updateProfile, updating, uError] = useUpdateProfile(auth);
     const onSubmit = async data => {
         console.log(data);
