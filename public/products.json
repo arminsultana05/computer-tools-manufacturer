@@ -1,57 +1,57 @@
 [
     {
-        "id": 1,
         "name": "KeyBord",
         "availableQty":"500",
         "minOrrderQty":150,
         "perUnitPrice":350,
-        "description": "Lubin, inventeur de parfums depuis plus de 220 ans...",
+        "qty":"0",
+        "description": "A keyboard is an input device and is the most basic way for...",
         "img": "https://i.ibb.co/TTLn9Jg/p1.jpg"
     },
     {
-        "id": 2,
         "name": "Printer",
        "availableQty":"400",
         "minOrrderQty":100,
         "perUnitPrice":550,
-        "description": "Lubin, inventeur de parfums depuis plus de 220 ans...",
+        "qty":"0",
+        "description": "printer, also called computer printer, electronic device that...",
         "img": "https://i.ibb.co/S5P3sX8/p3.jpg"
     },
     {
-        "id": 3,
         "name": "Mouse",
         "availableQty":"1000",
         "minOrrderQty":200,
         "perUnitPrice":250,
-        "description": "Lubin, inventeur de parfums depuis plus de 220 ans...",
+        "qty":"0",
+        "description": "A mouse is a small device that a computer user pushes acros...",
         "img": "https://i.ibb.co/dsZQfSF/p5.jpg"
     },
     {
-        "id": 4,
         "name": "Motherbord",
         "availableQty":"100",
         "minOrrderQty":50,
         "perUnitPrice":650,
-        "description": "Lubin, inventeur de parfums depuis plus de 220 ans...",
+        "qty":"0",
+        "description": "he motherboard is the backbone that ties the ...",
         "img": "https://i.ibb.co/4sq9t1c/p6.jpg"
     },
     {
-        "id": 5,
         "name": "CPU",
         "price": "1000",
         "availableQty":"500",
         "minOrrderQty":150,
         "perUnitPrice":350,
-        "description": "Lubin, inventeur de parfums depuis plus de 220 ans...",
+        "qty":"0",
+        "description": "The computer's central processing unit (CPU) is the...",
         "img": "https://i.ibb.co/FJgZ5pc/parts2.jpg"
     },
     {
-        "id": 6,
         "name": "Color Printer",
         "availableQty":"500",
         "minOrrderQty":150,
         "perUnitPrice":350,
-        "description": "Lubin, inventeur de parfums depuis plus de 220 ans...",
+        "qty":"0",
+        "description": "A color printer is a printer that allows for pages or ...",
         "img": "https://i.ibb.co/fx0p4Bk/p4.jpg"
     }
 ]

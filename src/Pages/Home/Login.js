@@ -12,7 +12,10 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [sendPasswordResetEmail, sending, rError] = useSendPasswordResetEmail(
+        auth
+      );
+    const { register, resetField, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
     let from =location.state?.from?.pathname || '/';
@@ -24,15 +27,16 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const onSubmit = data => {
+    const onSubmit = (data,e) => {
         console.log(data);
         signInWithEmailAndPassword(data.email, data.password)
+       
+       
     }
-    const handleReset =async(event)=>{
-        await sendPasswordResetEmail(event.target.email.value);
-        toast('Sent email');
-
-    }
+    const handleClick = (e) =>{ 
+        resetField("email");
+}
+    
 
 
     if (gUser || user) {
@@ -103,7 +107,7 @@ const Login = () => {
                             </label>
 
                         </div>
-                        <p className='cursor-pointer' onClick={handleReset} >Reset Password</p>
+                        <p className='cursor-pointer' onClick={handleClick} >Reset Password</p>
                         {signInError}
                         <input className='btn  btn-primary  text-white w-full ' type="submit" value="Login" />
                     </form>

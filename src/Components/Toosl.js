@@ -10,7 +10,7 @@ const Toosl = () => {
             <h1 className='text-4xl text-center mt-10 mb-5 text-orange-500 font-bold'>TOOLS ITEMS!!!</h1>
             <div className="product-container">
                 {
-                    products.slice(0, 6).map(product => <Product key={product.id}
+                    products.slice(0, 6).map(product => <Product key={product._id}
                         product={product}>
 
                     </Product>)
