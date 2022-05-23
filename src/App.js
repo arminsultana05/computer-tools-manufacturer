@@ -7,13 +7,20 @@ import Purchase from './Pages/Home/Purchase';
 import Footer from './Shared/Footer';
 import Header from './Shared/Header';
 import SignUp from './Pages/Home/SignUp'
-import { ToastContainer } from 'react-toastify';
 import RequireAuth from './Pages/Home/RequireAuth';
+import Dashbord from './Pages/Dashbord';
+import NotFound from './Pages/NotFound';
+import MyOrders from './Pages/MyOrders';
+import Rivews from './Pages/Rivews';
+// import MyOrders from './Pages/MyOrders';
+// import Rivews from './Pages/Rivews';
+
 
 
 function App() {
   return (
     <div>
+
       <Header>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
@@ -21,11 +28,20 @@ function App() {
           <Route path='/purchase/:purchaseId' element={<RequireAuth>
             <Purchase></Purchase>
           </RequireAuth>}></Route>
+          <Route path='/dashbord' element={<RequireAuth>
+            <Dashbord></Dashbord>
+          </RequireAuth>}>
+            <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route path= 'rivew' element={<Rivews></Rivews>}></Route>
+          </Route>
           <Route path='/register' element={<SignUp></SignUp>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
-        <Footer></Footer>
-        <ToastContainer></ToastContainer>
-      </Header>
+        </Header>
+
+      
+      <Footer></Footer>
+
 
 
     </div>

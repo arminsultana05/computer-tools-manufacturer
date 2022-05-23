@@ -1,25 +1,22 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { sendPasswordResetEmail } from 'firebase/auth';
-import { toast } from 'react-toastify';
+
+
 
 
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    const [sendPasswordResetEmail, sending, rError] = useSendPasswordResetEmail(
-        auth
-      );
-    const { register, resetField, formState: { errors }, handleSubmit } = useForm();
+   
+    const { register, resetField, formState: { errors }, handleSubmit,reset } = useForm();
     const navigate = useNavigate();
     const location = useLocation();
-    let from =location.state?.from?.pathname || '/';
-  
+    let from = location.state?.from?.pathname || '/';
+
     // <...Email Authentication...>
     const [
         signInWithEmailAndPassword,
@@ -27,22 +24,21 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const onSubmit = (data,e) => {
+    const onSubmit = (data) => {
         console.log(data);
+        reset()
         signInWithEmailAndPassword(data.email, data.password)
-       
-       
     }
-    const handleClick = (e) =>{ 
+    const handleClick = (e) => {
         resetField("email");
-}
-    
+    }
+
 
 
     if (gUser || user) {
-        navigate(from,{replace:true});
-      }
-    if(loading || gLoading){
+        navigate(from, { replace: true });
+    }
+    if (loading || gLoading) {
         return <Loading></Loading>
     }
     let signInError;
