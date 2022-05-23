@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery, QueryClientProvider, QueryClient } from 'react-query';
-import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const MakeAdmin = () => {
