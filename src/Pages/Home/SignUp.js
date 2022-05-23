@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../TokenHooks/useToken';
 
 
 const SignUp = () => {
@@ -19,6 +20,7 @@ const SignUp = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true });
       const [updateProfile, updating, uError] = useUpdateProfile(auth);
+      const [token]= useToken(gUser || user)
     const onSubmit = async data => {
         console.log(data);
         await  createUserWithEmailAndPassword(data.email, data.password)

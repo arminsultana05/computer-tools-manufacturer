@@ -41,11 +41,11 @@ const MyOrders = () => {
         <div>
             <h1 className='text-3xl text-green-900 font-semibold'>Your Orders{orders.length}</h1>
             <div class="overflow-x-auto">
-                <table class="table table-zebra w-full">
+                <table class="table table-zebra w-full  text-green-900">
                     {/* <!-- head --> */}
                     <thead>
-                        <tr>
-                            <th></th>
+                        <tr >
+                            <th ></th>
                             <th>Name</th>
                             <th>Quantity</th>
                             <th>Email</th>
@@ -56,8 +56,8 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(o=><tr>
-                                <th>1</th>
+                            orders.map((o, index)=><tr>
+                                <th>{index + 1}</th>
                                 <td>{o.product}</td>
                                 <td>{o.qty}</td>
                                 <td>{o.email}</td>

@@ -23,6 +23,7 @@ const Dashbord = () => {
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to='/dashbord' className="rounded-xl">My Orders</Link></li>
                     <li><Link to='/dashbord/rivew' className="rounded-xl">User Reviews</Link></li>
+                    <li><Link to='/dashbord/profile' className="rounded-xl">User Profile</Link></li>
                 </ul>
 
             </div>

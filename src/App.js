@@ -12,6 +12,7 @@ import Dashbord from './Pages/Dashbord';
 import NotFound from './Pages/NotFound';
 import MyOrders from './Pages/MyOrders';
 import Rivews from './Pages/Rivews';
+import MyProfile from './Pages/MyProfile';
 // import MyOrders from './Pages/MyOrders';
 // import Rivews from './Pages/Rivews';
 
@@ -33,14 +34,16 @@ function App() {
           </RequireAuth>}>
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path= 'rivew' element={<Rivews></Rivews>}></Route>
+            <Route path= 'profile' element={<MyProfile></MyProfile>}></Route>
           </Route>
           <Route path='/register' element={<SignUp></SignUp>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
+        <Footer></Footer>
         </Header>
 
       
-      <Footer></Footer>
+     
 
 
 
