@@ -9,6 +9,7 @@ const Header = ({ children }) => {
     const [user, loading, error] = useAuthState(auth);
     const logOut = () => {
         signOut(auth)
+        localStorage.removeItem('accessToken');
     }
     const menu = <>
         <li ><NavLink to='/' className="rounded-xl" >Home</NavLink></li>

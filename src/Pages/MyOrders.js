@@ -6,15 +6,27 @@ import auth from '../firebase.init';
 import AllOrsers from './AllOrsers';
 
 const MyOrders = () => {
+  
     const [user] = useAuthState(auth)
     const [orders, setOrders] = useState([])
     console.log(orders);
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orderCollection?email=${user.email}`)
-                .then(res => res.json())
-                .then(data => setOrders(data))
+            fetch(`http://localhost:5000/orderCollection?email=${user.email}`,{
+                method:'GET',
+                headers:{
+                    'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res =>{ 
+                    console.log('res',res);
+                    if(res.status ===403 || res.status ===403){
+                        navigate('/')
+
+                    }
+                   return res.json()})
+                .then(data => {setOrders(data)})
 
         }
     }, [user])
