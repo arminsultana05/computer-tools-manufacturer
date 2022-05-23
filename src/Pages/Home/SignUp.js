@@ -27,7 +27,9 @@ const SignUp = () => {
         await updateProfile({ displayName:data.name });
         navigate('/')
     }
-
+    if(token){
+        navigate('/')
+    }
 
     if (gUser || user) {
       navigate('/');
