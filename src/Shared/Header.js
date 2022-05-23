@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../firebase.init';
+import Footer from './Footer';
 
 
 const Header = ({ children }) => {
@@ -14,10 +15,14 @@ const Header = ({ children }) => {
     const menu = <>
         <li ><NavLink to='/' className="rounded-xl" >Home</NavLink></li>
 
-        <li><NavLink to='/purchase' className="rounded-xl">Purchase</NavLink></li>
+        {/* <li><NavLink to='/purchase/:purchaseId' className="rounded-xl">Purchase</NavLink></li> */}
         {
             user && <li><NavLink to='/dashbord' className="rounded-xl">Dashbord</NavLink></li>
         }
+         <li><NavLink to='/about' className="rounded-xl">About</NavLink></li>
+         <li><NavLink to='/blogs' className="rounded-xl">Blogs
+         </NavLink></li>
+
         <li>{user ? <button onClick={logOut} className='btn btn-ghost rounded-xl'>Sign Out</button> : <NavLink to='/login' className="rounded-xl">LogIn</NavLink>}</li>
     </>
     return (
@@ -27,7 +32,7 @@ const Header = ({ children }) => {
                 <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content flex flex-col">
                     {/* <!-- Navbar --> */}
-                    <div class="w-full navbar bg-base-300 lg:px-20">
+                    <div class="w-full navbar bg-base-200 lg:px-20">
                         <div class="flex-1 px-2  text-primary text-2xl font-semibold">Computer Parts Manufacturers</div>
                         <div class="flex-none lg:hidden">
                             <label for="my-drawer-3" class="btn btn-square btn-ghost">

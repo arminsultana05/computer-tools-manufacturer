@@ -5,6 +5,7 @@ import useProductIdDetail from '../../CustomHooks/useProductId';
 import auth from '../../firebase.init';
 import axios from 'axios';
 import './Purchase.css'
+import Swal from 'sweetalert2'
 
 
 const Purchase = () => {
@@ -15,13 +16,13 @@ const Purchase = () => {
     const handlePlaceOrder = event => {
         event.preventDefault()
         const orders = {
-           
+
             product: products.name,
             email: user.email,
             price: products.price,
             name: purchaseId,
             qty: products.qty,
-           
+
             address: event.target.address.value,
             phone: event.target.phone.value
         }
@@ -30,28 +31,39 @@ const Purchase = () => {
                 console.log(response);
             })
     }
-    const handleDecrease= id => {
+    const handleDecrease = id => {
         axios.put(`http://localhost:5000/products/update/${id}`)
-        if (products.qty <= 0 || products.qty <=products. minOrrderQty) {
-            return alert ("You Order must minimum Order Qty")
+        if (products.qty <= 0 || products.qty <= products.minOrrderQty || products.qty > products.availableQty) {
+            return Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Cannot order product below minimum quantity!',
+                footer: '<a href="">Why do I have this issue?</a>'
+            })
         } else {
             setProducts({ ...products, qty: products.qty = products.qty - 1 });
         }
-       
+
     }
     const handleIncrease = (event) => {
         event.preventDefault()
         const update = event.target.update.value;
         const qty = { qty: update }
-      
-        if (products.qty >= products.availableQty) {
-           return alert ("You can't buy more products than Availabe ")
-         
+
+        if (products.qty >= products.availableQty || update === '' || update <= 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You cant buy more products than Availabe!',
+                footer: '<a href="">Why do I have this issue?</a>'
+            })
+            //    return alert ("You can't buy more products than Availabe ")
+
         } else {
             setProducts({ ...products, qty: products.qty = products.qty + parseInt(update) });
             axios.put(`http://localhost:5000/products/stock/${purchaseId}`, { qty })
         }
-        
+
     }
     return (
         <div className="">
@@ -82,7 +94,7 @@ const Purchase = () => {
 
                                 <td>
                                     <span class="action_btn">
-                                        <button onClick={() => handleDecrease(products._id)}   className="btn btn-primary ">DECREASE QUANTITY</button>
+                                        <button onClick={() => handleDecrease(products._id)} className="btn btn-primary ">DECREASE QUANTITY</button>
                                     </span>
                                 </td>
                             </tr>
@@ -118,9 +130,9 @@ const Purchase = () => {
                     <br />
                     <input className='bg-green-600 w-full lg:w-3/5 mt-2 p-2 mt-5' type="submit" value="Place Order Your Item page" />
                 </form>
-               
+
             </div>
-            
+
         </div>
     );
 };

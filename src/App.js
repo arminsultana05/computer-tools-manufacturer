@@ -13,6 +13,9 @@ import NotFound from './Pages/NotFound';
 import MyOrders from './Pages/MyOrders';
 import Rivews from './Pages/Rivews';
 import MyProfile from './Pages/MyProfile';
+import About from './Pages/About';
+import Blogs from './Pages/Blogs';
+import MakeAdmin from './Pages/MakeAdmin';
 // import MyOrders from './Pages/MyOrders';
 // import Rivews from './Pages/Rivews';
 
@@ -25,7 +28,9 @@ function App() {
       <Header>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/about' element={<About></About>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
+          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/purchase/:purchaseId' element={<RequireAuth>
             <Purchase></Purchase>
           </RequireAuth>}></Route>
@@ -35,12 +40,16 @@ function App() {
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path= 'rivew' element={<Rivews></Rivews>}></Route>
             <Route path= 'profile' element={<MyProfile></MyProfile>}></Route>
+            <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
           </Route>
+          
           <Route path='/register' element={<SignUp></SignUp>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
         <Footer></Footer>
-        </Header>
+      </Header>
+        
+       
 
       
      
