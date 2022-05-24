@@ -1,8 +1,10 @@
 import React from 'react';
 import Banner from '../../Components/Banner';
+import Banner2 from '../../Components/Banner2';
+import Business from '../../Components/Business';
 import ReviewsSection from '../../Components/ReviewsSection';
 import Toosl from '../../Components/Toosl';
-import Footer from '../../Shared/Footer';
+
 
 
 const Home = () => {
@@ -10,10 +12,12 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Toosl></Toosl>
-          <ReviewsSection></ReviewsSection>
-            
+            <Banner2></Banner2>
+            <ReviewsSection></ReviewsSection>
+            <Business></Business>
 
-            
+
+
         </div>
     );
 };

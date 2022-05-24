@@ -65,7 +65,7 @@ const Purchase = () => {
                 text: 'You cant buy more products than Availabe!',
                 footer: '<a href="">Why do I have this issue?</a>'
             })
-            //    return alert ("You can't buy more products than Availabe ")
+           
 
         } else {
             setProducts({ ...products, qty: products.qty = products.qty + parseInt(update) });
