@@ -22,6 +22,9 @@ const Header = ({ children }) => {
          <li><NavLink to='/about' className="rounded-xl">About</NavLink></li>
          <li><NavLink to='/blogs' className="rounded-xl">Blogs
          </NavLink></li>
+         {
+            user && <li><button className="rounded-full bg-gray-500 text-white">{user.displayName}</button></li>
+        }
 
         <li>{user ? <button onClick={logOut} className='btn btn-ghost rounded-xl'>Sign Out</button> : <NavLink to='/login' className="rounded-xl">LogIn</NavLink>}</li>
     </>

@@ -33,7 +33,7 @@ const Purchase = () => {
     }
     const handleDecrease = id => {
         axios.put(`http://localhost:5000/products/update/${id}`)
-        if (products.qty <= 0 || products.qty <= products.minOrrderQty || products.qty > products.availableQty) {
+        if (products.qty <= 0 || products.qty <= products.minOrrderQty ) {
             return Swal.fire({
                 icon: 'error',
                 title: 'Oops...',

@@ -1,6 +1,6 @@
 .table_responsive {
     width: 100%;
-     border: 1px solid pink;
+     border: 1px solid #104a3a;
      background-color: #efefef33;
      padding: 15px;
      overflow: auto;
@@ -15,7 +15,7 @@
      border-collapse: collapse;
  }
  table>thead {
-     background-color:palevioletred;
+     background-color:#104a3a;
      color: #fff;
  }
  table>thead th {

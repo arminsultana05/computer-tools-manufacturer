@@ -64,7 +64,7 @@ const ManageProducts = () => {
                             <td>{p.qty}</td>
                             <td>
                                 <span class="action_btn">
-                                    <button onClick={() =>handleProdutc(p._id)} className="btn btn-primary bg-pink-500  ">Remove</button>
+                                    <button onClick={() =>handleProdutc(p._id)} className="btn btn-primary   ">Remove</button>
 
                                 </span>
                             </td>
