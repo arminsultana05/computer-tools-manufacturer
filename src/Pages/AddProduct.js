@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2'
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
@@ -16,6 +17,13 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             })
     }
     return (

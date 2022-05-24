@@ -29,6 +29,14 @@ const Purchase = () => {
         axios.post('http://localhost:5000/orderCollection', orders)
             .then(response => {
                 console.log(response);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+                
             })
     }
     const handleDecrease = id => {

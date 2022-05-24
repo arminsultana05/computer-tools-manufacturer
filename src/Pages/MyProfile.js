@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import Swal from 'sweetalert2'
 
 const MyProfile = () => {
     const [user] = useAuthState(auth)
@@ -18,6 +19,14 @@ const MyProfile = () => {
         axios.post('http://localhost:5000/user', orders)
             .then(response => {
                 console.log(response);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Successfully added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+
             })
     }
     return (
