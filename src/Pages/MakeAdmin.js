@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const MakeAdmin = () => {
+    // const {data: users,isLoading} = useQuery('users',()=>fetch('http://localhost:5000/user',{
+    //     method:'GET',
+    //     headers:{
+    //                     authorization:`Bearer ${localStorage.getItem('accessToken')}`
+    //                 }
+
+    // }).then(res=>res.json()))
+    // if(isLoading){
+    //     return <Loading></Loading>
+    // }
     const [users, setUsers] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/user',{
@@ -19,8 +31,8 @@ const MakeAdmin = () => {
     return (
         <div>
             <h1>All users{users.length}</h1>
-            <div class="overflow-x-auto w-4/5 mx-auto">
-                <table class="table w-full text-center ">
+            <div className="overflow-x-auto w-4/5 mx-auto">
+                <table className="table w-full text-center ">
                     {/* <!-- head --> */}
                     <thead className='text-primary'>
                         <tr>

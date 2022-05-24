@@ -51,9 +51,9 @@ const Rivews = () => {
     }
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl flex mx-auto mt-12">
-                <div class="card-body">
-                    <h2 class="card-title mx-auto text-primary">CUSTOMER REVIEW !!!</h2>
+            <div className="card w-96 bg-base-100 shadow-xl flex mx-auto mt-12">
+                <div className="card-body">
+                    <h2 className="card-title mx-auto text-primary">CUSTOMER REVIEW !!!</h2>
                     <form onSubmit={handleForm} >
                         <input className=' w-full border  border-purple-400 mt-3 p-1' type="text" name="name" placeholder='user-name' value={user.displayName} />
                         <br />
@@ -62,12 +62,12 @@ const Rivews = () => {
                         <input className=' w-full border  border-purple-400 mt-3 p-1' type="file" name="image" placeholder='image' />
                         <br />
 
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">Description</span>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Description</span>
 
                             </label>
-                            <textarea class="textarea textarea-bordered h-24" name="description" placeholder="Discription" ></textarea>
+                            <textarea className="textarea textarea-bordered h-24" name="description" placeholder="Discription" ></textarea>
 
                         </div>
 

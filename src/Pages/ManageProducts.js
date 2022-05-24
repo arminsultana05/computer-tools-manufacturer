@@ -42,7 +42,7 @@ const ManageProducts = () => {
     return (
         <div>
            <div className=''>
-            <div class="table_responsive">
+            <div className="table_responsive">
                 <table>
                     <thead>
                         <tr>
@@ -63,7 +63,7 @@ const ManageProducts = () => {
                             <td>{p.price}</td>
                             <td>{p.qty}</td>
                             <td>
-                                <span class="action_btn">
+                                <span className="action_btn">
                                     <button onClick={() =>handleProdutc(p._id)} className="btn btn-primary   ">Remove</button>
 
                                 </span>

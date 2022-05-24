@@ -3,8 +3,8 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div className='mt-28 mb-10 mx-auto '>
-            <div class="card w-3/3 bg-base-100 shadow-xl">
-                <div class="card-body">
+            <div className="card w-3/3 bg-base-100 shadow-xl">
+                <div className="card-body">
                     <div className="">
                         <h1 className='text-2xl text-blue-500  font-bold'>Q:1 HOW WILL YOU IMPROVE THE PERFORMANE OF A   REACT APPLICATION?</h1>
                         <p className='text-xl text left font-bold'>Answer: </p>

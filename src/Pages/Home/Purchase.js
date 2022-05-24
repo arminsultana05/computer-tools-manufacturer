@@ -101,7 +101,7 @@ const Purchase = () => {
                                 <td>{products.qty}</td>
 
                                 <td>
-                                    <span class="action_btn">
+                                    <span className="action_btn">
                                         <button onClick={() => handleDecrease(products._id)} className="btn btn-primary ">DECREASE QUANTITY</button>
                                     </span>
                                 </td>

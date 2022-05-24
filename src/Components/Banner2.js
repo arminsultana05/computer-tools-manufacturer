@@ -10,7 +10,7 @@ const Banner2 = () => {
                 <div className="mt-72">
                     <h1 className='lg:text-5xl font-bold lg:text-primary'>WE MANUFACTURE <br /> ALL KIND OF <br />COMPUTER PARTS !!!</h1>
                     <p className='text-xl font-semibold mt-2 mb-4'>All kinds of computer parts are manufactured here <br /> We are always on the lookout for customer satisfaction...</p>
-                    <button class="btn btn-primary w- rounded-xl text-center px-10">EXPLORE MORE</button>
+                    <button className="btn btn-primary w- rounded-xl text-center px-10">EXPLORE MORE</button>
                 </div>
 
             </div>

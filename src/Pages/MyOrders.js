@@ -72,8 +72,8 @@ const MyOrders = () => {
     return (
         <div>
             <h1 className='text-3xl text-green-900 font-semibold'>Your Orders{orders.length}</h1>
-            <div class="overflow-x-auto w-4/5 mx-auto">
-                <table class="table table-zebra w-full text-center">
+            <div className="overflow-x-auto w-4/5 mx-auto">
+                <table className="table table-zebra w-full text-center">
                     {/* <!-- head --> */}
                     <thead className='text-primary'>
                         <tr >

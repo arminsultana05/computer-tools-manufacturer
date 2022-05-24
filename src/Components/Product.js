@@ -9,18 +9,18 @@ const Product = ({ product }) => {
     }
     return (
         <div>
-            <div class="card w-96 bg-base-100 shadow-xl ">
-                <figure class="px-10 pt-10">
-                    <img src={img} alt="" class="rounded-xl" />
+            <div className="card w-96 bg-base-100 shadow-xl ">
+                <figure className="px-10 pt-10">
+                    <img src={img} alt="" className="rounded-xl" />
                 </figure>
-                <div class="card-body ml-6 text-lg font-semibold ">
-                    <h2 class="">Name: {name}</h2>
+                <div className="card-body ml-6 text-lg font-semibold ">
+                    <h2 className="">Name: {name}</h2>
                     <p>AvailableQty: {availableQty}</p>
                     <p>Min-OrderQty: {minOrrderQty}</p>
                     <p>Per-UnitPrice:$ {perUnitPrice}</p>
                     <p>Description:{description}</p>
-                    <div class="card-actions">
-                        <button onClick={() => handleOrderProduct(_id)} class="btn btn-primary rounded-full mt-3 w-full">Order Now</button>
+                    <div className="card-actions">
+                        <button onClick={() => handleOrderProduct(_id)} className="btn btn-primary rounded-full mt-3 w-full">Order Now</button>
                     </div>
                 </div>
             </div>

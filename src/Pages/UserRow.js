@@ -27,8 +27,8 @@ const UserRow = ({ user,index}) => {
         <tr>
             <th>{index+1}</th>
             <td>{email}</td>
-            <td>{ role!=='admin' &&<button onClick={makeAdmin} class="btn btn-primary btn-sm">Add Admin</button>}</td>
-            <td><button class="btn btn-primary btn-sm">Remove Admin</button></td>
+            <td>{ role!=='admin' &&<button onClick={makeAdmin} className="btn btn-primary btn-sm">Add Admin</button>}</td>
+            <td><button className="btn btn-primary btn-sm">Remove Admin</button></td>
         </tr>
 
     );
