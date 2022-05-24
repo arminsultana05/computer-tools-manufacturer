@@ -41,13 +41,13 @@ const Blogs = () => {
                     <div className="">
                         <h1 className='text-2xl text-blue-500  font-bold'>Q:4 Why you do not set the state directly in React.For example , ifyou have const [products, setProducts]= <br /> useState([])  .Why you donot setproduct =[...] instead,You use the setProduts?</h1>
                         <p className='text-xl text left font-bold'>Answer: </p>
-                        <p className='text-xl'>If you update it directly, calling the setState() afterward may just replace the update you made.When you directly update the  <br /> state, it does not change this.state immediately. Instead, it creates a pending state transition and accessing <br /> it after calling this method will only return the present value. <br /> You will lose control of the state across all components. </p>
-                        
+                        <p className='text-xl'>If you update it directly, calling the setState() afterward may just replace the update you made.When you directly update the  <br /> state, it does not change this.state immediately. Instead, it creates a pending state transition and accessing <br /> it after calling this method will only return the present value. You will lose control  <br /> of the state across all components.We declare a state variable called count, and set <br /> it to 0. React will remember its current value between re-renders, and provide the most <br />recent one   to our function. If we want to update the current count, we can call setCount. </p>
+
                     </div>
                     <div className="">
                         <h1 className='text-2xl text-blue-500  font-bold'>Q:5 WHAT IS A UNIT TEST? WHY SHOULD WRITE UNIT TESTS?</h1>
                         <p className='text-xl text left font-bold'>Answer: </p>
-                        <p className='text-xl'>Unit tests are typically automated tests written and run by software developers to ensure that a section of an application <br />  (known as the "unit") meets its design and behaves as intended. In procedural programming, a unit could be <br />an entire module, but it is more commonly an individual function or procedure. <br />In object-oriented programming, a unit is often an entire interface, such as a class, or an <br />individual method. By writing tests first for the smallest testable units, then the compound <br />behaviors between those, one can build up comprehensive tests for <br /> complex applications.</p>
+                        <p className='text-xl'>Unit tests are typically automated tests written and run by software developers to ensure that a section  <br />of an application  (known as the "unit") meets its design and behaves as <br />intended. In procedural programming, a unit could be an entire module, but it is more commonly<br /> an individual function or procedure.In object-oriented programming, a unit is often an  <br />entire interface, such as a class, or an individual method. By writing tests<br /> first for the smallest testable units, then the compound behaviors <br /> between those, one can build up comprehensive tests for <br /> complex applications.</p>
 
                     </div>
 
