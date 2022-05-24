@@ -26,6 +26,9 @@ const Dashbord = () => {
                     <li><Link to='/dashbord/rivew' className="rounded-xl">User Reviews</Link></li>
                     <li><Link to='/dashbord/profile' className="rounded-xl">User Profile</Link></li>
                     <li><Link to='/dashbord/makeadmin' className="rounded-xl">Make Admin</Link></li>
+                    <li><Link to='/dashbord/manageproducts' className="rounded-xl">Mnanage Products</Link></li>
+                    <li><Link to='/dashbord/allorders' className="rounded-xl">Manage All Orders</Link></li>
+                    <li><Link to='/dashbord/addproducts' className="rounded-xl">Add Produtcs</Link></li>
                 </ul>
 
             </div>

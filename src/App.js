@@ -16,6 +16,9 @@ import MyProfile from './Pages/MyProfile';
 import About from './Pages/About';
 import Blogs from './Pages/Blogs';
 import MakeAdmin from './Pages/MakeAdmin';
+import ManageProducts from './Pages/ManageProducts';
+import ManageOrders from './Pages/ManageOrders';
+import AddProduct from './Pages/AddProduct';
 // import MyOrders from './Pages/MyOrders';
 // import Rivews from './Pages/Rivews';
 
@@ -41,6 +44,9 @@ function App() {
             <Route path= 'rivew' element={<Rivews></Rivews>}></Route>
             <Route path= 'profile' element={<MyProfile></MyProfile>}></Route>
             <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
+            <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
+            <Route path='allorders' element={<ManageOrders></ManageOrders>}></Route>
+            <Route path ='addproducts' element={<AddProduct></AddProduct>}></Route>
           </Route>
           
           <Route path='/register' element={<SignUp></SignUp>}></Route>

@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -104,7 +104,6 @@ const MyOrders = () => {
                             </tr>)
                         }
 
-                        {/* <!-- row 2 --> */}
 
                     </tbody>
                 </table>

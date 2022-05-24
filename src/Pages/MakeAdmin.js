@@ -15,9 +15,7 @@ const MakeAdmin = () => {
             .then(data => setUsers(data))
     }, [])
 
-    // if(isLoading){
-    //     return <Loading></Loading>
-    // }
+    
     return (
         <div>
             <h1>All users{users.length}</h1>
