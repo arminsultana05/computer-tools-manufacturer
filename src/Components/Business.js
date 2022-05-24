@@ -9,7 +9,7 @@ const Business = () => {
         <div className="ml-24">
             <h1 className='text-5xl mt-24  mb-5 text-center text-primary font-bold py-6'>OUR BUISNESS SUMMARY!!!</h1>
             <div class="divider w-1/5 mx-auto h-1 mb-5 bg-primary"></div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 ml-10 mb-40'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:ml-10 mb-40'>
 
                 <div class="card w-96 bg-base-100 ">
                     <figure class="px-10 pt-10">

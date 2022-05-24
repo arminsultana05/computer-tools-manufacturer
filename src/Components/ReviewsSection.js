@@ -11,7 +11,7 @@ const ReviewsSection = () => {
         <div className="mb--16 bg-base-200 ">
             <h1 className='text-5xl mt-24  mb-5 text-center text-primary font-bold py-6'>WHAT CUSTOMER SAY!!!</h1>
             <div class="divider w-1/5 mx-auto h-1 mb-5 bg-primary"></div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 mb-24 mt-16 py-5 ml-7 pb-10'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 mb-24 mt-16 py-5 lg:ml-7 pb-10'>
             
             {
                 review.map(r=><div class="card w-96 bg-base-100 shadow-xl">
