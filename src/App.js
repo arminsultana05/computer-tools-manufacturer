@@ -19,6 +19,7 @@ import MakeAdmin from './Pages/MakeAdmin';
 import ManageProducts from './Pages/ManageProducts';
 import ManageOrders from './Pages/ManageOrders';
 import AddProduct from './Pages/AddProduct';
+import Payment from './Pages/Payment';
 // import MyOrders from './Pages/MyOrders';
 // import Rivews from './Pages/Rivews';
 
@@ -47,6 +48,7 @@ function App() {
             <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
             <Route path='allorders' element={<ManageOrders></ManageOrders>}></Route>
             <Route path ='addproducts' element={<AddProduct></AddProduct>}></Route>
+            <Route path ='payment/:id' element={<Payment></Payment>}></Route>
           </Route>
           
           <Route path='/register' element={<SignUp></SignUp>}></Route>

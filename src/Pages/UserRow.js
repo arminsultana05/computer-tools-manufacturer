@@ -7,9 +7,11 @@ const UserRow = ({ user,index}) => {
         fetch (`http://localhost:5000/user/admin/${email}`,{
 
         method:'PUT',
-        headers:{
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
+        // headers:{
+        //     'content-tyoe':'application/json',
+
+        //     authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        // }
         })
         .then(res=> res.json())
         .then(data =>{

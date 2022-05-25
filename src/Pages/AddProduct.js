@@ -20,7 +20,7 @@ const AddProduct = () => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Your work has been saved',
+                    title: 'Successfully Added Your Item Home page!!!',
                     showConfirmButton: false,
                     timer: 1500
                   })

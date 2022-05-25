@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import swal from 'sweetalert';
 
@@ -80,10 +80,13 @@ const MyOrders = () => {
                             <th ></th>
                             <th>Name</th>
                             <th>Quantity</th>
+                        
                             <th>Email</th>
                             <th>Address</th>
                             <th>Phone</th>
+                            <th>Payment</th>
                             <th>Action</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -95,12 +98,20 @@ const MyOrders = () => {
                                 <td>{o.email}</td>
                                 <td>{o.address}</td>
                                 <td>{o.phone}</td>
+                                <td>{(o.qty && !o.paid )&& <Link to={`/dashbord/payment/${o._id}`}><button className="btn btn-primary " >PAYMENT YOUR ORDER</button></Link>}
+                                {(o.qty && o.paid )&& <button className="btn btn-success " >PAYMENT YOUR ORDER</button> }
+                                </td>
 
                                 <td>
 
                                     <button onClick={() => handleRemove(o._id)} className="btn btn-primary ">CANCEL YOUR ORDER</button>
 
                                 </td>
+                                {/* <td>
+
+                                    <button  className="btn btn-primary ">PAYMENT YOUR ORDER</button>
+
+                                </td> */}
                             </tr>)
                         }
 

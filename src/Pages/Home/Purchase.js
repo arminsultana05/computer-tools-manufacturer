@@ -32,7 +32,7 @@ const Purchase = () => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Your work has been saved',
+                    title: 'Successfully Added Your Product My Order Page',
                     showConfirmButton: false,
                     timer: 1500
                   })

@@ -18,9 +18,10 @@ const MakeAdmin = () => {
     useEffect(() => {
         fetch('http://localhost:5000/user',{
             method:'GET',
-            headers:{
-                authorization:`Bearer ${localStorage.getItem('accessToken')}`
-            }
+            // headers:{
+            //     // 'content-tyoe':'application/json',
+            //     authorization:`Bearer ${localStorage.getItem('accessToken')}`
+            // }
 
         })
             .then(res => res.json())

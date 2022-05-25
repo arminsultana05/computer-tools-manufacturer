@@ -25,10 +25,10 @@ const SignUp = () => {
         console.log(data);
         await  createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName:data.name });
-        navigate('/')
+        navigate('/dashbord')
     }
     if(token){
-        navigate('/')
+        navigate('/dashbord')
     }
 
     if (gUser || user) {
