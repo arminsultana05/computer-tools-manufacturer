@@ -32,7 +32,7 @@ const About = () => {
                   <li>8:EXPRESS JS</li></ul></div></p>
             <p className='text-2xl font-bold mt-8 mb-2'><span className='text-orange-500 font-bold'>WEBSITE LINK 1:  </span>https://certified-career-coach.web.app/</p>
             <p className='text-2xl font-bold mb-2'><span className='text-orange-500 font-bold'>WEBSITE LINK 2:  </span>https://perfume-ware-house-assignment.web.app/</p>
-            <p className='text-2xl font-bold mb-2'><span className='text-orange-500 font-bold'>WEBSITE LINK 3:  </span></p>
+            <p className='text-2xl font-bold mb-2'><span className='text-orange-500 font-bold'>WEBSITE LINK 3:  </span>https://assignment12-client-side.web.app/</p>
           </div>
         </div>
 
