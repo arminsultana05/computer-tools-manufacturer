@@ -12,7 +12,7 @@ const Dashbord = () => {
 
     return (
         <>
-            <div className="drawer drawer-mobile h-screen">
+            <div className="drawer drawer-mobile h-screen ">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
                 <div className="drawer-content ">
                     <label for="my-drawer-2" className="btn btn-primary drawer-button mb-5 lg:hidden ">Dashbord</label>
@@ -47,7 +47,9 @@ const Dashbord = () => {
                 </div>
 
             </div>
-            <Footer></Footer>
+           
+               <Footer></Footer>
+          
         </>
         
 
