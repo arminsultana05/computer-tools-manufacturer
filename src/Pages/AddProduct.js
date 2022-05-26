@@ -6,7 +6,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/products`;
+        const url = `https://calm-refuge-43715.herokuapp.com/products`;
         fetch(url, {
             method: 'POST',
             headers: {

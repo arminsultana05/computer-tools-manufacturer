@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const MakeAdmin = () => {
-    // const {data: users,isLoading} = useQuery('users',()=>fetch('http://localhost:5000/user',{
+    // const {data: users,isLoading} = useQuery('users',()=>fetch('https://calm-refuge-43715.herokuapp.com/user',{
     //     method:'GET',
     //     headers:{
     //                     authorization:`Bearer ${localStorage.getItem('accessToken')}`
@@ -16,7 +16,7 @@ const MakeAdmin = () => {
     // }
     const [users, setUsers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/user',{
+        fetch('https://calm-refuge-43715.herokuapp.com/user',{
             method:'GET',
             // headers:{
             //     // 'content-tyoe':'application/json',

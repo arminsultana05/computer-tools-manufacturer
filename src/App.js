@@ -54,8 +54,11 @@ function App() {
           <Route path='/register' element={<SignUp></SignUp>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
         </Routes>
-        <Footer></Footer>
+       
+       
       </Header>
+    
+     
         
        
 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ManageOrders = () => {
     const [order, setOrder] = useState([])
     useEffect(() => {
-       fetch('http://localhost:5000/orderCollection')
+       fetch('https://calm-refuge-43715.herokuapp.com/orderCollection')
        .then(res =>res.json())
        .then(data=> setOrder(data))
     }, [])
@@ -49,8 +49,6 @@ const ManageOrders = () => {
                                 </td>
                             </tr>)
                         }
-
-
                     </tbody>
                 </table>
             </div>

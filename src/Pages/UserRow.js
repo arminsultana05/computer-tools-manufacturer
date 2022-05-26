@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 const UserRow = ({ user,index}) => {
     const {email, role}=user;
     const makeAdmin =()=>{
-        fetch (`http://localhost:5000/user/admin/${email}`,{
+        fetch (`https://calm-refuge-43715.herokuapp.com/user/admin/${email}`,{
 
         method:'PUT',
         // headers:{

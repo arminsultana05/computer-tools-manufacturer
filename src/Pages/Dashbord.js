@@ -11,7 +11,8 @@ const Dashbord = () => {
     const [admin] = useAdmin(user)
 
     return (
-        <div className="drawer drawer-mobile">
+        <>
+        <div className="drawer drawer-mobile h-full">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
             <div className="drawer-content ">
                 <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden ">Dashbord</label>
@@ -54,8 +55,12 @@ const Dashbord = () => {
 
             </div>
 
+         
+                  
 
         </div>
+        <Footer></Footer>
+        </>
 
     );
 };

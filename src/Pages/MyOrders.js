@@ -13,7 +13,7 @@ const MyOrders = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orderCollection?email=${user.email}`, {
+            fetch(`https://calm-refuge-43715.herokuapp.com/orderCollection?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -46,7 +46,7 @@ const MyOrders = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                const url = `http://localhost:5000/orderCollection/${id}`;
+                const url = `https://calm-refuge-43715.herokuapp.com/orderCollection/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })
@@ -98,8 +98,8 @@ const MyOrders = () => {
                                 <td>{o.email}</td>
                                 <td>{o.address}</td>
                                 <td>{o.phone}</td>
-                                <td>{(o.qty && !o.paid )&& <Link to={`/dashbord/payment/${o._id}`}><button className="btn btn-primary " >PAYMENT YOUR ORDER</button></Link>}
-                                {(o.qty && o.paid )&& <button className="btn btn-success " >PAYMENT YOUR ORDER</button> }
+                                <td>{(o.price && !o.paid )&& <Link to={`/dashbord/payment/${o._id}`}><button className="btn btn-primary " >PAYMENT YOUR ORDER</button></Link>}
+                                {(o. price&& o.paid )&& <button className="btn btn-success " >PAYMENT YOUR ORDER</button> }
                                 </td>
 
                                 <td>

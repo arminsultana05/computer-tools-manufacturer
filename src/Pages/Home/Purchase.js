@@ -26,7 +26,7 @@ const Purchase = () => {
             address: event.target.address.value,
             phone: event.target.phone.value
         }
-        axios.post('http://localhost:5000/orderCollection', orders)
+        axios.post('https://calm-refuge-43715.herokuapp.com/orderCollection', orders)
             .then(response => {
                 console.log(response);
                 Swal.fire({
@@ -40,7 +40,7 @@ const Purchase = () => {
             })
     }
     const handleDecrease = id => {
-        axios.put(`http://localhost:5000/products/update/${id}`)
+        axios.put(`https://calm-refuge-43715.herokuapp.com/products/update/${id}`)
         if (products.qty <= 0 || products.qty <= products.minOrrderQty ) {
             return Swal.fire({
                 icon: 'error',
@@ -69,7 +69,7 @@ const Purchase = () => {
 
         } else {
             setProducts({ ...products, qty: products.qty = products.qty + parseInt(update) });
-            axios.put(`http://localhost:5000/products/stock/${purchaseId}`, { qty })
+            axios.put(`https://calm-refuge-43715.herokuapp.com/products/stock/${purchaseId}`, { qty })
         }
 
     }

@@ -16,7 +16,7 @@ const MyProfile = () => {
             education:event.target.education.value,
            location:event.target.location.value,
         }
-        axios.post('http://localhost:5000/orderCollection', orders)
+        axios.post('https://calm-refuge-43715.herokuapp.com/orderCollection', orders)
             .then(response => {
                 console.log(response);
                 Swal.fire({

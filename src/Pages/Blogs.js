@@ -1,7 +1,9 @@
 import React from 'react';
+import Footer from '../Shared/Footer';
 
 const Blogs = () => {
     return (
+       <>
         <div className='mt-28 mb-10 mx-auto '>
             <div className="card w-3/3 bg-base-100 shadow-xl">
                 <div className="card-body">
@@ -55,6 +57,8 @@ const Blogs = () => {
             </div>
 
         </div>
+        <Footer></Footer>
+       </>
     );
 };
 

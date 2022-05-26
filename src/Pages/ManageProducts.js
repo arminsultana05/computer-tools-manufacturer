@@ -16,7 +16,7 @@ const ManageProducts = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                const url = `http://localhost:5000/products/${id}`;
+                const url = `https://calm-refuge-43715.herokuapp.com/products/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })

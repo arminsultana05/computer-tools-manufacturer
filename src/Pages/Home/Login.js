@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
    
     const { register, resetField, formState: { errors }, handleSubmit,reset } = useForm();
@@ -32,7 +33,10 @@ const Login = () => {
     const handleClick = (e) => {
         resetField("email");
     }
+if(user || gUser){
+    navigate('/')
 
+}
 
 
     if (gUser || user) {

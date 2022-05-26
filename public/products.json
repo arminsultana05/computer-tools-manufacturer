@@ -1,6 +1,7 @@
 [
     {
         "name": "KeyBord",
+        "price": 600,
         "availableQty":500,
         "minOrrderQty":150,
         "perUnitPrice":350,
@@ -10,6 +11,7 @@
     },
     {
         "name": "Printer",
+        "price": 500,
        "availableQty":400,
         "minOrrderQty":100,
         "perUnitPrice":550,
@@ -19,6 +21,7 @@
     },
     {
         "name": "Mouse",
+        "price": 600,
         "availableQty":1000,
         "minOrrderQty":200,
         "perUnitPrice":250,
@@ -28,6 +31,7 @@
     },
     {
         "name": "Motherbord",
+        "price": 400,
         "availableQty":100,
         "minOrrderQty":50,
         "perUnitPrice":650,
@@ -37,7 +41,7 @@
     },
     {
         "name": "CPU",
-        "price": "1000",
+        "price": 1000,
         "availableQty":500,
         "minOrrderQty":150,
         "perUnitPrice":350,
@@ -47,6 +51,7 @@
     },
     {
         "name": "Color Printer",
+        "price": 500,
         "availableQty":500,
         "minOrrderQty":150,
         "perUnitPrice":350,

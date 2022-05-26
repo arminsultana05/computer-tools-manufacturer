@@ -5,18 +5,20 @@ import Business from '../../Components/Business';
 import Extrasession from '../../Components/Extrasession';
 import ReviewsSection from '../../Components/ReviewsSection';
 import Toosl from '../../Components/Toosl';
+import Footer from '../../Shared/Footer';
 
 
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Banner></Banner>
             <Toosl></Toosl>
             <Banner2></Banner2>
             <ReviewsSection></ReviewsSection>
             <Extrasession></Extrasession>
             <Business></Business>
+            <Footer></Footer>
 
 
 

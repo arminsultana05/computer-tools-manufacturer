@@ -22,7 +22,7 @@ const Rivews = () => {
         const user = { name, description, ratings, img };
         console.log(user);
         if (ratings >= 1 && ratings <= 5) {
-            const url = `http://localhost:5000/review`
+            const url = `https://calm-refuge-43715.herokuapp.com/review`
             fetch(url, {
                 method: "POST",
                 headers: {
