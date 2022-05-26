@@ -34,7 +34,7 @@ const Login = () => {
         resetField("email");
     }
 if(user || gUser){
-    navigate('/')
+    navigate('/dashbord')
 
 }
 

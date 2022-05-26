@@ -42,6 +42,7 @@ const ManageProducts = () => {
     return (
         <div>
            <div className=''>
+               <h1 className='text-center text-2xl font-bold text-orange-500 mb-8 mt-8'>MANAGE YOUR PRODUCTS</h1>
             <div className="table_responsive">
                 <table>
                     <thead>

@@ -32,7 +32,7 @@ const SignUp = () => {
     }
 
     if (gUser || user) {
-      navigate('/');
+      navigate('/dashbord');
     }
     if(loading || gLoading || updating){
         return <Loading></Loading>
@@ -124,7 +124,7 @@ const SignUp = () => {
                     {signInError}
                     <input className='btn text-white w-full ' type="submit" value="SignUp" />
                 </form>
-                <p className='ml-2'>Already have an Account? <Link to='/login' className='text-secondary'>Login</Link></p>
+                <p className='ml-2'>Already have an Account? <Link to='/login' className='text-primary text-xl font-bold'>Login</Link></p>
                 <div className="divider">OR</div>
                 <button onClick={() => signInWithGoogle()} className="btn btn-outline ">CONTINUE WITH GOOGLE</button>
 

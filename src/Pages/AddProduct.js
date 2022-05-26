@@ -27,7 +27,8 @@ const AddProduct = () => {
             })
     }
     return (
-        <div className='mt-16'>
+        <div className='mt-16 h-screen'>
+            <h1 className='text-center text-2xl font-bold text-orange-500'>ADD NEW PRODUCTS</h1>
         <form className='flex flex-col items-center  ' onSubmit={handleSubmit(onSubmit)}>
             <input className=' mt-5 border border-gray-600 w-2/5 p-3 ' placeholder='name' {...register("name")} />
            <input className=' mt-5 border border-gray-600 w-2/5  p-3' placeholder='Photo URL' type="text" {...register("img")} />

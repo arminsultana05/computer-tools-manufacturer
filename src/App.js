@@ -20,6 +20,7 @@ import ManageProducts from './Pages/ManageProducts';
 import ManageOrders from './Pages/ManageOrders';
 import AddProduct from './Pages/AddProduct';
 import Payment from './Pages/Payment';
+import DashbordMain from './Components/DashbordMain';
 // import MyOrders from './Pages/MyOrders';
 // import Rivews from './Pages/Rivews';
 
@@ -41,7 +42,8 @@ function App() {
           <Route path='/dashbord' element={<RequireAuth>
             <Dashbord></Dashbord>
           </RequireAuth>}>
-            <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route index element={<DashbordMain></DashbordMain>}></Route>
+            <Route path= 'order'  element={<MyOrders></MyOrders>}></Route>
             <Route path= 'rivew' element={<Rivews></Rivews>}></Route>
             <Route path= 'profile' element={<MyProfile></MyProfile>}></Route>
             <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
@@ -57,16 +59,6 @@ function App() {
        
        
       </Header>
-    
-     
-        
-       
-
-      
-     
-
-
-
     </div>
   );
 }

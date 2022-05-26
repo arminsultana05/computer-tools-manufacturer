@@ -8,9 +8,8 @@ const Business = () => {
     return (
         <div className="ml-24">
             <h1 className='text-5xl mt-24  mb-5 text-center text-primary font-bold py-6'>OUR BUISNESS SUMMARY!!!</h1>
-            <div className="divider w-1/5 mx-auto h-1 mb-5 bg-primary"></div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:ml-10 mb-40'>
-
+            <div className="divider  w-1/5 mx-auto h-1 mb-5 bg-primary"></div>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 lg:ml-10 mb-40 '>
                 <div className="card w-96 bg-base-100 ">
                     <figure className="px-10 pt-10">
                         <img src={logo} alt="Shoes" className="rounded-xl" />
@@ -43,7 +42,7 @@ const Business = () => {
                     <div className="card-body items-center text-center">
                         <p className='text-2xl font-bold'>Licensed & Certified</p>
                         <p>or your safety and peace of mind, we're fully licensed, certified, and insured!</p>
-                        
+
 
                     </div>
                     <div className="mx-auto">
@@ -51,11 +50,7 @@ const Business = () => {
                         <h1 className='text-4xl font-bold text-primary'>33.50 k</h1>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
     );
 };

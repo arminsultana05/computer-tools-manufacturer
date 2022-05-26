@@ -32,7 +32,7 @@ const MyProfile = () => {
     return (
         <div>
            <div className="text-center h-50 mb-6">
-                <h1 className='mb-2 text-2xl font-semibold'>YOUR INFORMATION</h1>
+                <h1 className='mb-2 text-2xl font-semibold mt-6 text-orange-600'>YOUR INFORMATION</h1>
                 <form onSubmit={handlePlaceOrder} >
                     
                     <input className='w-full lg:w-2/5 border border-green-900 p-1 mt-5 rounded-xl ' type="text" name="name" value={user?.displayName} placeholder='name' id="" readOnly />

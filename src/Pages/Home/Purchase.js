@@ -6,10 +6,13 @@ import auth from '../../firebase.init';
 import axios from 'axios';
 import './Purchase.css'
 import Swal from 'sweetalert2'
+import useToken from '../../TokenHooks/useToken';
+import useAdmin from '../../CustomHooks/useAdmin';
 
 
 const Purchase = () => {
     const [user] = useAuthState(auth)
+    const [admin]= useAdmin(user)
     const { purchaseId } = useParams()
     const [products, setProducts] = useProductIdDetail(purchaseId)
     console.log(products);
@@ -58,8 +61,8 @@ const Purchase = () => {
         const update = event.target.update.value;
         const qty = { qty: update }
 
-        if (products.qty >= products.availableQty || update === '' || update <= 0) {
-            Swal.fire({
+        if (products.qty  > products.availableQty || update === '' || update <= 0  ) {
+                return Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'You cant buy more products than Availabe!',
@@ -136,7 +139,12 @@ const Purchase = () => {
                     <br />
                     <input className='w-full lg:w-3/5 border border-green-900 p-1 mt-3' type="text" name="phone" placeholder='phone' id="" />
                     <br />
-                    <input className='bg-green-600 w-full lg:w-3/5 mt-2 p-2 mt-5' type="submit" value="Place Order Your Item page" />
+                    {
+                        admin?<> <input className='bg-green-600 w-full lg:w-3/5 mt-2 p-2 mt-5' type="submit" value="Place Order Your Item page" disabled/> <br />
+                        <span className='text-red-600'>Admin Can Not Place Order</span></>:<> <input className='bg-green-600 w-full lg:w-3/5 mt-2 p-2 mt-5' type="submit" value="Place Order Your Item page" /></>
+                    }
+                    
+                   
                 </form>
 
             </div>
