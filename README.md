@@ -1,6 +1,6 @@
 # COMPUTER PARTS/TOOLS MANUFACTURER WEBSITE
 
- COMPUTER PARTS/TOOLS MANUFACTURER WEBSITE LINK[Website Link](https://assignment12-client-side.web.app/).
+ COMPUTER PARTS/TOOLS MANUFACTURER WEBSITE  [Website Link](https://assignment12-client-side.web.app/).
 
 ## FEATURES OF THE PROJECT
 * Used Google and email authentication.
